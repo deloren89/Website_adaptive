@@ -1,0 +1,195 @@
+body{background: url(images/geometry2.png); margin: 0; padding: 0;
+	font:16px/24px Arial, Tahoma, sans-serif; color: #272727;}
+	a{text-decoration: none;}
+/*структура сайта*/
+
+div.mid{width: 1000px; margin: 0 auto;}
+/*first comes the gradient and only then - color!*/
+div.header{
+	padding-top: 20px;
+		background: 
+			radial-gradient(rgba(255,255,255,0.1), #000000 250px,
+			transparent 250px) 10% -200px no-repeat;
+	background-color:#000000; background-size: 500px 500px; }
+
+div.footer{margin: 20px 0;
+text-align: center;
+text-transform: uppercase;}
+
+/*Website HAT*/
+div.topmenu{float: right; height: 70px; line-height: 70px}
+div.topmenu a{margin: 0 0 0 10px; color: #1683a3;}
+div.topmenu a:hover{color: #FFF;}
+
+div.afisha{
+	padding: 20px 50px 1px 50px; 
+	margin-top: 20px;
+	background: linear-gradient(90deg,
+	 #c16a8a 100px, 
+	 #a367ba 100px,	 #a367ba 200px, 
+	 #2b798f 200px, #2b798f 300px,
+	 #76a7ac 300px, #76a7ac 400px,
+	 #93ae65 400px, #93ae65 500px,
+	 #dbb16f 500px) left top repeat-x;
+	background-color:#FEFEFE;
+	background-size: 600px 10px;
+	}
+div.afisha img{float: left;}
+div.afisha h3{
+	font-size: 24px; 
+	font-weight: normal; 
+	text-align: center;
+	color: #830000;}
+
+
+div.afisha p{text-align: center;}
+div.afisha a{font-size: 20px; #fff;
+	font-weight: bold;
+	background: #b23600;
+	border: 1px solid #862900;
+	padding: 5px 15px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 7px -1px #777;
+	text-shadow: 0px 0px 3px #752300}
+
+div.afisha a:hover{
+background: #068bac;
+border: 1px solid #046d88;
+text-shadow: 0px 0px 3px #034E61;}
+
+/* Main Menu   */
+
+div.menu{
+	background: #1683a3;
+	border: 1px solid #016c8b;
+	border-left: none;
+	border-right: none;}
+
+div.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;}
+
+div.menu ul li{
+	display: inline-block;
+	margin: 5px 50px;
+}	
+
+div.menu ul li a{
+	color: #272727;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 3px #0b4455;
+}
+div.menu a:hover{color: #FFF;}
+
+/*site content*/
+div.fon{background: #fff;
+	border: 1px solid #ccc;
+	border-top: none;
+	padding: 40px;}
+div.fon hr.line{border: none;
+	height: 0;
+	border-bottom: 1px dashed #ccc;
+	margin: 40px 0;}
+
+div.block{width: 440px; float: left;}
+/* to spread it on the page (npt close) CSS3 Special pseudo class*/
+div.block:nth-of-type(even){float: right;}
+div.block a p{color: #272727;}
+
+div.anons{background: #f5f5f5;
+border: 1px solid #ccc;
+border-radius: 3px;
+padding: 20px;
+box-shadow: 1px 1px 5px #777;
+}
+div.anons:hover{background: #e0eff4;
+border: 1px solid #bfd5dd;
+/*delay upon hovering*/
+transition: all 1s}
+
+div.anons img {box-shadow: 1px 1px 5px #777;  transition: transform 0.5s}
+/*Pictures zoom in*/
+div.anons:hover img {transform:scale(1.15) rotate(2deg);}
+div.block:nth-of-type(even) div.anons:hover img {transform:scale(1.15) rotate(-2deg);  transition: transform 0.6s}
+div.anons h3 {font-size: 20px;
+margin: 20px 0 10px;
+color: #01617d;
+padding: 0;
+font-weight: normal;
+line-height: 20px;
+}
+
+div.anons p{text-shadow:1px 1px 0 #fff;}
+
+/*Middle banner*/
+div.rek{margin: 40px 0;}
+
+div.rek img{border: 1px solid #ccc;
+border-radius: 3px;
+box-shadow: 1px 1px 5px #777;
+position: relative;}
+
+/*ANIMATION*/
+/*Chrome*/
+@-webkit-keyframes prigskok{
+	0%{top: 0;}
+	10%{top: 40px;}
+	20%{top: -30;}
+	30%{top: 40px;}
+	40%{top: -20px;}
+	50%{top: 40px;}
+	60%{top: -10px;}
+	70%{top: 40px;}
+	80%{top: 0;}
+	90%{top: 40px;}
+	95%{top: 20px;}
+	100%{top: 0;}
+}
+
+/*IE, FF*/
+@keyframes prigskok{
+	0%{top: 0;}
+	10%{top: 40px;}
+	20%{top: -30;}
+	30%{top: 40px;}
+	40%{top: -20px;}
+	50%{top: 40px;}
+	60%{top: -10px;}
+	70%{top: 40px;}
+	80%{top: 0;}
+	90%{top: 40px;}
+	95%{top: 20px;}
+	100%{top: 0;}
+}
+
+div.rek img:hover{
+	-webkit-animation: prigskok 2s;
+	animation: prigskok 2s; 
+}
+
+
+/*footer*/
+div.footer span{margin: 0 20px;}
+
+div.clear{clear: both;}
+
+/*adaptive design*/
+/*Up to 1000 px*/
+@media screen and (max-width:999px){
+	div.mid{width: 95%;}
+	div.afisha h3{font-size: 22px;}	
+	div.block{width: 48%;}
+	div.anons img, div.rek img {width: 100%;}
+	div.anons h3 {font-size: 18px;}
+}
+
+/*Up to 640 px*/
+@media screen and (max-width:640px){
+	div.header{text-align: center; background-position: center -150px;}
+	div.topmenu, div.afisha img,	div.block, div.block:nth-of-type(even){float: none;}
+	div.block{width: auto; margin-bottom: 40px;}
+	div.block:nth-last-of-type(2){margin-bottom: 0;}
+	div.footer span{margin: 10px 0; display: block; font-size: 12px;}
+}
